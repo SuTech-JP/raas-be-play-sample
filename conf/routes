@@ -1,0 +1,17 @@
+# Routes
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# このファイルで全 API エンドポイントを定義する（上に書いたルートが優先される）
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# RaaS セッション作成
+# msa: "report" または "datatraveler"
+POST   /raas/:msa/session                        controllers.RaasController.createSession(msa: String)
+
+# レポートレイアウト一覧の取得
+GET    /raas/report/layout/:application/:schema  controllers.RaasController.loadLayouts(application: String, schema: String)
+
+# CSVインポートログデータの取得
+GET    /raas/report/result/:targetId             controllers.RaasController.loadLogData(targetId: String)
+
+# テナント削除
+POST   /raas/tenant/delete                       controllers.RaasController.deleteTenant()
