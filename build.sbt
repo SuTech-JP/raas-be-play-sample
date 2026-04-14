@@ -6,9 +6,11 @@ scalaVersion := "3.3.3"
 lazy val root = (project in file("."))
   .enablePlugins(PlayScala)
 
-// raas-client-java をローカル Maven リポジトリから解決する
-// 事前に raas-client-java ディレクトリで `mvn install` を実行すること
-resolvers += Resolver.mavenLocal
+// raas-client-java を GitHub Packages から解決する
+// 事前に ~/.sbt/1.0/credentials.properties に GitHub トークンを設定すること
+credentials += Credentials(Path.userHome / ".sbt" / "1.0" / "credentials.properties")
+
+resolvers += "GitHub Packages" at "https://maven.pkg.github.com/SuTech-JP/raas-client-java"
 
 libraryDependencies ++= Seq(
   guice,
