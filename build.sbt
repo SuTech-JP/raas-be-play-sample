@@ -16,7 +16,7 @@ libraryDependencies ++= Seq(
   guice,
   filters,
   // Pure Java SDK (Spring 非依存)
-  "jp.co.sutech" % "raas-client-java" % "1.0.0"
+  "jp.co.sutech" % "raas-client-java" % "1.0.1"
 )
 
 // Java 11 互換
