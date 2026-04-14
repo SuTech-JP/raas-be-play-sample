@@ -84,14 +84,6 @@ curl -X POST http://localhost:8080/raas/report/session \
 curl http://localhost:8080/raas/report/layout/myapp/myschema
 ```
 
-**テナント削除:**
-
-```bash
-curl -X POST http://localhost:8080/raas/tenant/delete \
-  -H "Content-Type: application/json" \
-  -d '{"tenant": "tenant-id-to-delete"}'
-```
-
 ## プロジェクト構成
 
 ```
