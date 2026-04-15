@@ -132,13 +132,3 @@ try {
   client.clearTokenCache()
 }
 ```
-
-## 他言語サンプルとの対応
-
-| サンプル | 言語 / フレームワーク | SDK |
-|---------|---------------------|-----|
-| raas-be-rails-sample | Ruby / Rails | raas-client-for-rails |
-| raas-be-go-sample | Go | raas-client-go |
-| raas-be-ktor-sample | Kotlin / Ktor | raas-client-ktor |
-| raas-next-sample | TypeScript / Next.js | raas-client-for-typescript |
-| **raas-be-play-sample** | **Scala / Play Framework** | **raas-client-java** |
