@@ -6,17 +6,12 @@ scalaVersion := "3.3.3"
 lazy val root = (project in file("."))
   .enablePlugins(PlayScala)
 
-// raas-client-java を GitHub Packages から解決する
-// 事前に ~/.sbt/1.0/credentials.properties に GitHub トークンを設定すること
-credentials += Credentials(Path.userHome / ".sbt" / "1.0" / "credentials.properties")
-
-resolvers += "GitHub Packages" at "https://maven.pkg.github.com/SuTech-JP/raas-client-java"
+// raas-client-java の JAR を lib/ ディレクトリから解決する
+// SuTech より提供された raas-client-java-<version>-all.jar を lib/ に配置すること
 
 libraryDependencies ++= Seq(
   guice,
-  filters,
-  // Pure Java SDK (Spring 非依存)
-  "jp.co.sutech" % "raas-client-java" % "1.0.1"
+  filters
 )
 
 // Java 11 互換
