@@ -6,3 +6,4 @@ project/project/
 .bloop/
 *.class
 .DS_Store
+lib/*.jar
